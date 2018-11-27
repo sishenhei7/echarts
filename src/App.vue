@@ -3,7 +3,6 @@
     <mu-drawer v-resize="resize" :open.sync="open" :docked="docked" :right="position === 'right'" :z-depth="4">
 			<mu-appbar style="width: 100%;" title="Echarts" :z-depth="1"></mu-appbar>
       <SidebarList/>
-      <SidebarList/>
     </mu-drawer>
     <mu-appbar class="app-topbar" :class="{ 'is-open': open }" color="primary">
       <mu-button @click="open = true" v-show="!open" icon slot="left">
@@ -12,7 +11,7 @@
       Echarts demo
     </mu-appbar>
     <div class="app-content" :class="{ 'is-open': open }">
-      123456
+      <router-view/>
     </div>
   </div>
 </template>
