@@ -79,7 +79,66 @@ export default {
   }
 }
 
+.absolute-md {
+  position: absolute;
+  margin:auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 .mu-list {
   padding: 0;
 }
+
+@media only screen and (max-width: 1920px) {
+  .echarts-wrap {
+    width: 1300px;
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .echarts-wrap {
+    width: 900px;
+    height: 450px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .echarts-wrap {
+    width: 800px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .echarts-wrap {
+    width: 650px;
+    height: 325px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .echarts-wrap {
+    width: 500px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .echarts-wrap {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .echarts-wrap {
+    width: 300px;
+    height: 150px;
+  }
+}
+
 </style>
