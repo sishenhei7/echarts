@@ -7,11 +7,11 @@
 import echarts from 'echarts/lib/echarts';
 
 // 引入柱状图
-import * from 'echarts/lib/chart/bar';
+import 'echarts/lib/chart/bar';
 
 // 引入提示框和标题组件
-import * from 'echarts/lib/component/tooltip';
-import * from 'echarts/lib/component/title';
+import 'echarts/lib/component/tooltip';
+import 'echarts/lib/component/title';
 
 export default {
   mounted: function () {

@@ -7,13 +7,12 @@
 import echarts from 'echarts/lib/echarts';
 
 // 引入折线图
-import * from 'echarts/lib/echarts';
+import 'echarts/lib/chart/line';
 // 引入组件
-import * from 'echarts/lib/component/tooltip';
-import * from 'echarts/lib/component/title';
-import * from 'echarts/lib/component/tooltip';
-import * from 'echarts/lib/component/toolbox';
-import * from 'echarts/lib/component/dataZoom';
+import 'echarts/lib/component/title';
+import 'echarts/lib/component/tooltip';
+import 'echarts/lib/component/toolbox';
+import 'echarts/lib/component/dataZoom';
 
 export default {
   mounted: function () {
