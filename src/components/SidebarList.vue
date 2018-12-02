@@ -32,8 +32,8 @@
 <script>
 export default {
   methods: {
-    goRouter(path) {
-    	this.$router.push({ path });
+		goRouter(path) {
+			this.$router.push({ path });
     }
   }
 }

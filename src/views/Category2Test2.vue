@@ -4,12 +4,14 @@
 
 <script>
 // 引入 ECharts 主模块
-var echarts = require('echarts/lib/echarts');
+import echarts from 'echarts/lib/echarts';
+
 // 引入柱状图
-require('echarts/lib/chart/bar');
+import * from 'echarts/lib/chart/bar';
+
 // 引入提示框和标题组件
-require('echarts/lib/component/tooltip');
-require('echarts/lib/component/title');
+import * from 'echarts/lib/component/tooltip';
+import * from 'echarts/lib/component/title';
 
 export default {
   mounted: function () {

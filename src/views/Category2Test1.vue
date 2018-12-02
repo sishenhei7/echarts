@@ -4,15 +4,16 @@
 
 <script>
 // 引入 ECharts 主模块
-var echarts = require('echarts/lib/echarts');
+import echarts from 'echarts/lib/echarts';
+
 // 引入折线图
-require('echarts/lib/chart/line');
+import * from 'echarts/lib/echarts';
 // 引入组件
-require('echarts/lib/component/tooltip');
-require('echarts/lib/component/title');
-require('echarts/lib/component/tooltip');
-require('echarts/lib/component/toolbox');
-require('echarts/lib/component/dataZoom');
+import * from 'echarts/lib/component/tooltip';
+import * from 'echarts/lib/component/title';
+import * from 'echarts/lib/component/tooltip';
+import * from 'echarts/lib/component/toolbox';
+import * from 'echarts/lib/component/dataZoom';
 
 export default {
   mounted: function () {
