@@ -1,4 +1,5 @@
 import {
+  shallowMount,
   mount,
   createLocalVue
 } from '@vue/test-utils';
@@ -7,9 +8,12 @@ import App from '@/App.vue';
 import SidebarList from '@/components/SidebarList.vue';
 import Content from '@/components/Content.vue';
 import Topbar from '@/components/Topbar.vue';
+import VueRouter from 'vue-router';
 
 const localVue = createLocalVue();
+localVue.use(VueRouter);
 localVue.use(MuseUI);
+
 
 describe('App.vue', () => {
 
@@ -18,12 +22,12 @@ describe('App.vue', () => {
   });
 
   it('触发openSidebar事件后open为true', () => {
-    const wrapper = mount(App, {
+    const wrapper = shallowMount(App, {
       localVue,
       stubs: {
         SidebarList,
         Content,
-        Topbar
+        Topbar,
       }
     });
     console.log(wrapper.html());
