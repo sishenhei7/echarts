@@ -1,0 +1,1 @@
+export const GET_BLOGLIST = 'GET_BLOGLIST';

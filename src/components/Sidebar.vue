@@ -1,20 +1,23 @@
 <template>
-  <mu-appbar class="app-topbar" :class="{ 'is-open': open }" color="primary">
-    <mu-button @click="open = true" v-show="!open" icon slot="left">
-      <mu-icon value="menu"></mu-icon>
-    </mu-button>
-    Echarts demo
-  </mu-appbar>
+  <mu-drawer v-resize="resize" :open.sync="open" :docked="docked" :right="position === 'right'" :z-depth="4">
+    <mu-appbar style="width: 100%;" title="Echarts" :z-depth="1"></mu-appbar>
+    <SidebarList/>
+  </mu-drawer>
 </template>
 
 <script>
+import SidebarList from '@/components/SidebarList.vue';
+
 export default {
   props: ['open'],
   data () {
     return {
-      docked: false,
+      docked: true,
       position: 'left'
     }
+  },
+  components: {
+    SidebarList
   }
 }
 </script>

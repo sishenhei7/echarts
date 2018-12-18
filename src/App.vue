@@ -1,23 +1,20 @@
 <template>
   <div id="app">
-    <mu-drawer v-resize="resize" :open.sync="open" :docked="docked" :right="position === 'right'" :z-depth="4">
-			<mu-appbar style="width: 100%;" title="Echarts" :z-depth="1"></mu-appbar>
-      <SidebarList/>
-    </mu-drawer>
+    <Sidebar open="open"/>
     <Topbar @openSidebar="openSidebar"/>
     <Content open="open"/>
   </div>
 </template>
 
 <script>
-import SidebarList from '@/components/SidebarList.vue';
+import Sidebar from '@/components/Sidebar.vue';
 import Content from '@/components/Content.vue';
 import Topbar from '@/components/Topbar.vue';
 
 export default {
   name: 'app',
   components: {
-    SidebarList,
+    Sidebar,
     Content,
     Topbar,
   },
