@@ -4,25 +4,22 @@
 			<mu-appbar style="width: 100%;" title="Echarts" :z-depth="1"></mu-appbar>
       <SidebarList/>
     </mu-drawer>
-    <mu-appbar class="app-topbar" :class="{ 'is-open': open }" color="primary">
-      <mu-button @click="open = true" v-show="!open" icon slot="left">
-        <mu-icon value="menu"></mu-icon>
-      </mu-button>
-      Echarts demo
-    </mu-appbar>
-    <div class="app-content" :class="{ 'is-open': open }">
-      <router-view/>
-    </div>
+    <Topbar @openSidebar="openSidebar"/>
+    <Content open="open"/>
   </div>
 </template>
 
 <script>
-import SidebarList from './components/SidebarList.vue';
+import SidebarList from '@/components/SidebarList.vue';
+import Content from '@/components/Content.vue';
+import Topbar from '@/components/Topbar.vue';
 
 export default {
   name: 'app',
   components: {
-    SidebarList
+    SidebarList,
+    Content,
+    Topbar,
   },
   data () {
     return {
@@ -40,6 +37,9 @@ export default {
         this.open = false;
         this.docked = false;
       }
+    },
+    openSidebar () {
+      this.open = true;
     }
   }
 }

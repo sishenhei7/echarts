@@ -1,5 +1,5 @@
 <template>
-	<mu-list toggle-nested>
+	<mu-list toggle-nested class="list1">
 		<mu-list-item button :ripple="true" nested :open="false">
 			<mu-list-item-title>Sent mail</mu-list-item-title>
 			<mu-list-item-action>
@@ -31,6 +31,7 @@
 
 <script>
 export default {
+	name: 'SidebarList',
   methods: {
 		goRouter(path) {
 			this.$router.push({ path });

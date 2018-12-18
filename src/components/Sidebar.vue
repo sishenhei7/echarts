@@ -1,7 +1,10 @@
 <template>
-  <mu-drawer :open.sync="open" class="left-sidebar" :z-depth="4">
-    <mu-appbar style="width: 100%;" title="Echarts" :z-depth="1"></mu-appbar>
-  </mu-drawer>
+  <mu-appbar class="app-topbar" :class="{ 'is-open': open }" color="primary">
+    <mu-button @click="open = true" v-show="!open" icon slot="left">
+      <mu-icon value="menu"></mu-icon>
+    </mu-button>
+    Echarts demo
+  </mu-appbar>
 </template>
 
 <script>
