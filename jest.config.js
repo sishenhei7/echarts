@@ -19,14 +19,10 @@ module.exports = {
   testMatch: [
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
   ],
-<<<<<<< HEAD
-  testURL: 'http://localhost/'
-=======
   testURL: 'http://localhost/',
   collectCoverage: true,
   collectCoverageFrom: [
     "**/*.{js,vue}",
     "!**/node_modules/**"
   ]
->>>>>>> refs/remotes/origin/master
 }

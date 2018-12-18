@@ -5,14 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-<<<<<<< HEAD
     "test": "jest",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
-=======
-    "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit"
->>>>>>> refs/remotes/origin/master
   },
   "dependencies": {
     "echarts": "^4.2.0-rc.2",
