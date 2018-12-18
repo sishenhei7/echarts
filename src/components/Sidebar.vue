@@ -18,6 +18,17 @@ export default {
   },
   components: {
     SidebarList
+  },
+  methods: {
+    resize () {
+      if(window.innerWidth > 1000) {
+        this.open = true;
+        this.docked = true;
+      } else {
+        this.open = false;
+        this.docked = false;
+      }
+    }
   }
 }
 </script>

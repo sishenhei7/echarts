@@ -10,7 +10,7 @@ export default new Vuex.Store({
     blogList,
     echartsData
   },
-  strict: debug
+  strict: true
 })
 
 
