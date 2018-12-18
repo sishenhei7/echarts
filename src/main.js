@@ -4,11 +4,13 @@ import 'muse-ui/dist/muse-ui.css';
 import router from './router';
 import App from './App.vue';
 import './assets/icon.css';
+import store from './store'
 
 Vue.config.productionTip = false;
 Vue.use(MuseUI);
 
 new Vue({
   router,
-  render: h => h(App),
+  store,
+  render: h => h(App)
 }).$mount('#app')
