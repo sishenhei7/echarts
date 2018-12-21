@@ -10,11 +10,11 @@ localVue.use(MuseUI);
 
 
 describe('SidebarList.vue', () => {
-  it('包含Sent mail', () => {
+  it('should contain Nav 1', () => {
     const wrapper = mount(SidebarList, {
       localVue
     });
-    expect(wrapper.html()).toContain('Sent mail');
+    expect(wrapper.html()).toContain('Nav 1');
   });
 
   // it('点击展开包含Category1Test1', () => {

@@ -8,7 +8,7 @@
 			<template v-for="item in navList">
 				<mu-list-item :key="item.name" button :ripple="false" slot="nested" @click="goRouter(item.route)">
 					<mu-list-item-title>
-					 {{	item.name }}
+						{{ item.name }}
 					</mu-list-item-title>
 				</mu-list-item>
 			</template>
