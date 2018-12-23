@@ -16,10 +16,10 @@ export default {
   },
   created() {
     const tempBlogTitles = [];
-    // api.getBlogList().then((res) => {
-    //   console.log('hahahah', res);
-    //   res.forEach(item => tempBlogTitles.push(item.title));
-    // });
+    api.getBlogList().then((res) => {
+      // console.log('hahahah', res);
+      res.forEach(item => tempBlogTitles.push(item.title));
+    });
     this.blogTitles = tempBlogTitles;
   }
 }

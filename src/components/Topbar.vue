@@ -1,6 +1,6 @@
 <template>
     <mu-appbar class="topbar" color="primary">
-      <mu-button @click="open" class="topbar-button" icon slot="left">
+      <mu-button @click="openSidebar" class="topbar-button" icon slot="left">
         <mu-icon value="menu"></mu-icon>
       </mu-button>
       Echarts demo
@@ -10,9 +10,10 @@
 <script>
 export default {
   name: 'Topbar',
+  props: ['open'],
   methods: {
-    open() {
-      this.$emit('openSidebar');
+    openSidebar() {
+      this.$emit('update:open', true);
     }
   }
 }

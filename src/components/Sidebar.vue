@@ -9,7 +9,7 @@
 import SidebarList from '@/components/SidebarList.vue';
 
 export default {
-  props: ['open'],
+  props: ['openSidebar'],
   data () {
     return {
       docked: true,
@@ -22,26 +22,25 @@ export default {
   methods: {
     resize () {
       if(window.innerWidth > 1000) {
-        this.open = true;
+        this.$emit('update:openSidebar', true);
         this.docked = true;
       } else {
-        this.open = false;
+        this.$emit('update:openSidebar', false);
         this.docked = false;
+      }
+    }
+  },
+  computed: {
+    open: {
+      get: function() {
+        return this.openSidebar;
+      },
+      set: function(val) {
+        this.$emit('update:openSidebar', val);
       }
     }
   }
 }
 </script>
-
-
-<style scoped lang="less">
-@media screen and (max-width: 1000px) {
-  .left-sidebar {
-    -webkit-transform: translate3d(-100%,0,0);
-    transform: translate3d(-100%,0,0);
-    visibility: hidden;
-  }
-}
-</style>
 
 

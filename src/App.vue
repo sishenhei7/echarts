@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Sidebar open="open"/>
-    <Topbar @openSidebar="openSidebar"/>
+    <Sidebar :openSidebar.sync="open"/>
+    <Topbar :open.sync="open"/>
     <Content open="open"/>
   </div>
 </template>
@@ -68,5 +68,4 @@ export default {
     left: 256px;
   }
 }
-
 </style>
